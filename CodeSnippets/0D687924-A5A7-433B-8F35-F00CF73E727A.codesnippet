@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ll</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func settingLink(tv: UITextView){
+    
+    let descAttributes: [NSAttributedStringKey : Any] = [
+      NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont(name: &lt;#Font Name#&gt;, size: &lt;#Size#&gt;)!,
+      NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue):
+      &lt;#Font Color#&gt;
+    ]
+    
+    // 這一段是文字是 link，在這邊設定顏色是沒有用的
+    let mailAttributes: [NSAttributedStringKey : Any] = [
+      NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont(name: &lt;#Font Name#&gt;, size: &lt;#Size#&gt;)!
+    ]
+    
+    let desc = NSMutableAttributedString(string: "&lt;#desc#&gt;", attributes: descAttributes)
+    
+    let link = NSMutableAttributedString(string: "&lt;#link desc#&gt;", attributes: mailAttributes)
+    
+    let otherDesc = NSMutableAttributedString(string: "&lt;#other desc#&gt;", attributes: descAttributes)
+    
+    // 設定 mail 文字所觸發的 link 事件
+    link.addAttribute(NSAttributedStringKey.link, value: "mailto:&lt;#link desc#&gt;", range: NSRange(location: 0, length: link.length))
+    
+    desc.append(link)
+    desc.append(otherDesc)
+    
+    // link 的顏色要在 textView 這邊設定
+    tv.linkTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: &lt;#link color#&gt;]
+    
+    tv.attributedText = desc
+    
+  }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0D687924-A5A7-433B-8F35-F00CF73E727A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Link</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ss</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>&lt;#view#&gt;.layer.cornerRadius = 10.rescaleFontSize()
+    &lt;#view#&gt;.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.26).cgColor
+    &lt;#view#&gt;.layer.shadowOpacity = 1
+    &lt;#view#&gt;.layer.shadowOffset = CGSize(width: 1, height: 1)
+    &lt;#view#&gt;.layer.shadowRadius = 10.rescaleFontSize()
+    &lt;#view#&gt;.layer.shadowPath = UIBezierPath(rect: &lt;#view#&gt;.bounds).cgPath</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E1555B9F-EC58-46BD-86DF-15CBAEA2B34B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Shadow</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

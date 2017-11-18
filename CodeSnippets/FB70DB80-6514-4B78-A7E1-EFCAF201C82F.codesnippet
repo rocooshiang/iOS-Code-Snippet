@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>nn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>initNavigationBar() // move to viewDidLoad()
+  
+  func initNavigationBar(){
+    initLeftItem()
+    initRightItem()
+    let navigationBar = navigationController!.navigationBar
+    navigationBar.shadowImage = UIImage()
+    navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: &lt;# Font Name#&gt;, size: &lt;#size#&gt;)!,NSAttributedStringKey.foregroundColor: &lt;#Font Color#&gt;]
+    self.navigationItem.title = &lt;#Title#&gt;
+    navigationBar.backgroundColor = .white
+    navigationBar.barTintColor = .white
+  }
+  
+  func initLeftItem(){
+    let back = UIButton()
+    back.setImage(UIImage(named: &lt;#Img Name#&gt;), for: .normal)
+    back.frame = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 14.0)
+    back.addTarget(self, action: #selector(leftItemTapped), for: .touchUpInside)
+    let backItem = UIBarButtonItem()
+    backItem.customView = back
+    self.navigationItem.leftBarButtonItem = backItem
+  }
+  
+  @objc func leftItemTapped() {
+    leavePage()
+  }
+  
+  func initRightItem(){
+    let back = UIButton()
+    back.frame = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 14.0)
+    back.setTitle(&lt;#title#&gt;, for: .normal)
+    back.titleLabel?.font = UIFont(name: &lt;#Font Name#&gt;, size: 16)
+    back.setTitleColor(&lt;#Title Color#&gt;, for: .normal)
+    back.addTarget(self, action: #selector(rightItemTapped), for: .touchUpInside)
+    let backItem = UIBarButtonItem()
+    backItem.customView = back
+    self.navigationItem.rightBarButtonItem = backItem
+  }
+  
+  @objc func rightItemTapped() {
+    
+  }  
+  
+  func leavePage(){
+    view.endEditing(true)
+    self.navigationController?.popViewController(animated: true)
+  }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FB70DB80-6514-4B78-A7E1-EFCAF201C82F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NavigationBar</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

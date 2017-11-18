@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pp</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func openSystemPhone(number: String){
+  if let url = URL(string: "tel://\(number)"), UIApplication.shared.canOpenURL(url) {    
+    if #available(iOS 10, *) {
+      UIApplication.shared.open(url)
+    } else {
+      UIApplication.shared.openURL(url)
+    }
+  }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7105AC10-E587-42FC-8480-EEB7964418C9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Open System Phone</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

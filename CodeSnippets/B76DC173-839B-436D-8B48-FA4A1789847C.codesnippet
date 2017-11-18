@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>nn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func triggerNotificationFlow(){
+    
+    /***
+     1. 判斷是否已經 trigger 過 notification 的 alert
+     2. 驗證 User 是否允許開啟Notification
+     ***/
+    
+    // 1.
+    UNUserNotificationCenter.current().getNotificationSettings { (setting) in
+      
+      if setting.authorizationStatus.rawValue == UNAuthorizationStatus.notDetermined.rawValue{
+        
+        // 2.
+        UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
+          DispatchQueue.main.async {
+            if granted{
+              
+              print("Notify not determined -&gt; granted")
+              
+              UIApplication.shared.registerForRemoteNotifications()
+              UserDefaults.standard.set(true, forKey: "enableNotification")
+            }else{
+              print("Notify not determined -&gt; not granted")
+              UserDefaults.standard.set(false, forKey: "enableNotification")
+            }
+            
+            UserDefaults.standard.synchronize()
+          }
+        }
+        
+      }else{
+        
+        // 2.
+        UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
+          DispatchQueue.main.async {
+            if granted{
+              print("Notify determined -&gt; granted")
+              UIApplication.shared.registerForRemoteNotifications()
+              UserDefaults.standard.set(true, forKey: "enableNotification")
+              UserDefaults.standard.synchronize()
+            }else{
+              print("Notify determined -&gt; not granted")
+              self.gotoPhoneSetting()
+            }
+          }
+        }
+      }
+    }
+
+  }
+  
+  
+  func gotoPhoneSetting(){
+    guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+      return
+    }
+    
+    if UIApplication.shared.canOpenURL(settingsUrl) {
+      UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+        print("Settings opened: \(success)")
+      })
+    }
+    
+  }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B76DC173-839B-436D-8B48-FA4A1789847C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Checking Notification Flow</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
