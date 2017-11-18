@@ -18,6 +18,6 @@ Note
 <br />
 <br />
 
-<img src="https://github.com/rocooshiang/iOS-Code-Snippet/blob/master/Screenshot/Img1.png" width="320" height="212" />
+<img src="https://github.com/rocooshiang/iOS-Code-Snippet/blob/master/Screenshot/Img1.png" width="450" height="298" />
 
 
