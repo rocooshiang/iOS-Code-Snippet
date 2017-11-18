@@ -18,5 +18,6 @@ Note
 <br />
 <br />
 
-![Xcode indent settings](https://github.com/rocooshiang/iOS-Code-Snippet/blob/master/Screenshot/Img1.png =320x212)
+<img src="https://github.com/rocooshiang/iOS-Code-Snippet/blob/master/Screenshot/Img1.png" width="320" height="212" />
+
 
