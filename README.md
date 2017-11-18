@@ -6,13 +6,13 @@ Note
 ```swift
   Language - 指定在哪中語言中顯示
   
-  Completion Shortcut - 設定對應的文字，方便快速搜尋 (ii, ss...etc.)
-  
-  Completion Scope - 這個非常重要！！ 指定特定的區塊搜尋 shortcut 才會跑出相應的內容，避免一個 shortcut 就把所有相應的內容顯示出來
+  Completion Shortcut - 設定對應的文字，方便快速搜尋，像是 tt, ss, ii...etc.
+ 
+  Completion Scope - 這個非常重要！！ 指定特定的區塊搜尋 shortcut 才會跑出相應的內容，避免一個 shortcut 就把所有相應的內容顯示出來
 ```
 
 <br />
 <br />
 
-![Xcode indent settings](Screenshot/Img1.jpg)
+![Xcode indent settings](https://github.com/rocooshiang/iOS-Code-Snippet/blob/master/Screenshot/Img1.png)
 
