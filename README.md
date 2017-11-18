@@ -1,7 +1,11 @@
 Note
 ------------------
+<br />
+
 * **將整個 CodeSnippets 資料夾放到 /Users/Your Name/Library/Developer/Xcode/UserData 底下即可使用**
 * **製作過程記得設定 Language, Completion Shortcut, Completion Scope**
+
+<br />
 
 ```swift
   Language - 指定在哪中語言中顯示
@@ -14,5 +18,5 @@ Note
 <br />
 <br />
 
-![Xcode indent settings](https://github.com/rocooshiang/iOS-Code-Snippet/blob/master/Screenshot/Img1.png)
+![Xcode indent settings](https://github.com/rocooshiang/iOS-Code-Snippet/blob/master/Screenshot/Img1.png =320x212)
 
