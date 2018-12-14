@@ -9,58 +9,60 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>fileprivate enum cellType: Int{
-  case &lt;#item#&gt; = 0
-  static var count: Int { return &lt;#item#&gt;.rawValue + 1 }
+	<string>
+fileprivate enum CellType: Int{
+    case &lt;#item#&gt; = 0
+    static var count: Int { return &lt;#item#&gt;.rawValue + 1 }
 }
 
 // MARK: - TableviewDelegate
 extension &lt;# UIViewController #&gt;: UITableViewDelegate{
-  
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
     
-    switch cellType(rawValue: indexPath.row)! {
-    case &lt;#pattern#&gt;:
-      return &lt;#height#&gt;
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
+        
+        switch CellType(rawValue: indexPath.row)! {
+        case &lt;#pattern#&gt;:
+            return &lt;#height#&gt;
+        }
     }
-  }
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-  }
-  
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 }
 
 // MARK: - UITableViewDataSource
 extension &lt;# UIViewController #&gt;: UITableViewDataSource{
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
-    return &lt;# Int #&gt;
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
     
-    switch cellType(rawValue: indexPath.row)! {
-    case &lt;#pattern#&gt;:
-      return &lt;#cell#&gt;
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        return CellType.count
     }
     
-  }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+        
+        switch CellType(rawValue: indexPath.row)! {
+        case &lt;#pattern#&gt;:
+            return &lt;#cell#&gt;
+        }
+        
+    }
 }
 
 
 // MARK: - Cell
 extension &lt;#UIViewController#&gt;{
-  
-  func &lt;#Name#&gt;(indexPath: IndexPath) -&gt; &lt;#TableViewCell#&gt;{
     
-    let reuseId = &lt;#id#&gt;
-    let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! &lt;#TableViewCell#&gt;
+    func &lt;#Name#&gt;(indexPath: IndexPath) -&gt; &lt;#TableViewCell#&gt;{
+        
+        let reuseId = &lt;#id#&gt;
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! &lt;#TableViewCell#&gt;
+        
+        return cell
+    }
     
-    return cell
-  }
-  
-}</string>
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>BD116BAF-7DA4-45A3-A437-525842D52B59</string>
 	<key>IDECodeSnippetLanguage</key>

@@ -2,7 +2,7 @@ Note
 ------------------
 <br />
 
-* **將整個 CodeSnippets 資料夾放到 /Users/Your Name/Library/Developer/Xcode/UserData 底下即可使用**
+* **將整個 CodeSnippets 資料夾放到 /Users/Your Name/Library/Developer/Xcode/UserData/CodeSnippets 底下即可使用**
 * **製作過程記得設定 Language, Completion Shortcut, Completion Scope**
 
 <br />
