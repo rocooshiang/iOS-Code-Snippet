@@ -11,48 +11,48 @@
 	<key>IDECodeSnippetContents</key>
 	<string>initNavigationBar() // move to viewDidLoad()
   
-  func initNavigationBar(){
+  func initNavigationBar() {
     initLeftItem()
     initRightItem()
     let navigationBar = navigationController!.navigationBar
     navigationBar.shadowImage = UIImage()
-    navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: &lt;# Font Name#&gt;, size: &lt;#size#&gt;)!,NSAttributedStringKey.foregroundColor: &lt;#Font Color#&gt;]
+    navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: &lt;# Font Name#&gt;, size: &lt;#size#&gt;)!,NSAttributedString.Key.foregroundColor: &lt;#Font Color#&gt;]
     self.navigationItem.title = &lt;#Title#&gt;
     navigationBar.backgroundColor = .white
     navigationBar.barTintColor = .white
   }
   
-  func initLeftItem(){
-    let back = UIButton()
-    back.setImage(UIImage(named: &lt;#Img Name#&gt;), for: .normal)
-    back.frame = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 14.0)
-    back.addTarget(self, action: #selector(leftItemTapped), for: .touchUpInside)
-    let backItem = UIBarButtonItem()
-    backItem.customView = back
-    self.navigationItem.leftBarButtonItem = backItem
+  func initLeftItem() {
+    let btn = UIButton()
+    btn.setImage(UIImage(named: &lt;#Img Name#&gt;), for: .normal)
+    btn.frame = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 14.0)
+    btn.addTarget(self, action: #selector(leftItemTapped), for: .touchUpInside)
+    let btnItem = UIBarButtonItem()
+    btnItem.customView = btn
+    self.navigationItem.leftBarButtonItem = btnItem
   }
   
   @objc func leftItemTapped() {
     leavePage()
   }
   
-  func initRightItem(){
-    let back = UIButton()
-    back.frame = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 14.0)
-    back.setTitle(&lt;#title#&gt;, for: .normal)
-    back.titleLabel?.font = UIFont(name: &lt;#Font Name#&gt;, size: 16)
-    back.setTitleColor(&lt;#Title Color#&gt;, for: .normal)
-    back.addTarget(self, action: #selector(rightItemTapped), for: .touchUpInside)
-    let backItem = UIBarButtonItem()
-    backItem.customView = back
-    self.navigationItem.rightBarButtonItem = backItem
+  func initRightItem() {
+    let btn = UIButton()
+    btn.frame = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 14.0)
+    btn.setTitle(&lt;#title#&gt;, for: .normal)
+    btn.titleLabel?.font = UIFont(name: &lt;#Font Name#&gt;, size: 16)
+    btn.setTitleColor(&lt;#Title Color#&gt;, for: .normal)
+    btn.addTarget(self, action: #selector(rightItemTapped), for: .touchUpInside)
+    let btnItem = UIBarButtonItem()
+    btnItem.customView = btn
+    self.navigationItem.rightBarButtonItem = btnItem
   }
   
   @objc func rightItemTapped() {
     
   }  
   
-  func leavePage(){
+  func leavePage() {
     view.endEditing(true)
     self.navigationController?.popViewController(animated: true)
   }</string>
@@ -60,6 +60,8 @@
 	<string>FB70DB80-6514-4B78-A7E1-EFCAF201C82F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>NavigationBar</string>
 	<key>IDECodeSnippetUserSnippet</key>

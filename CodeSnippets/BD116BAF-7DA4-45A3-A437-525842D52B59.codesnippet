@@ -9,21 +9,11 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>
-fileprivate enum CellType: Int{
-    case &lt;#item#&gt; = 0
-    static var count: Int { return &lt;#item#&gt;.rawValue + 1 }
-}
-
-// MARK: - TableviewDelegate
-extension &lt;# UIViewController #&gt;: UITableViewDelegate{
+	<string>// MARK: - TableviewDelegate
+extension &lt;# UIViewController #&gt;: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
-        
-        switch CellType(rawValue: indexPath.row)! {
-        case &lt;#pattern#&gt;:
-            return &lt;#height#&gt;
-        }
+        return &lt;#height#&gt;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -33,40 +23,29 @@ extension &lt;# UIViewController #&gt;: UITableViewDelegate{
 }
 
 // MARK: - UITableViewDataSource
-extension &lt;# UIViewController #&gt;: UITableViewDataSource{
+extension &lt;# UIViewController #&gt;: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
-        return CellType.count
+        return 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
-        
-        switch CellType(rawValue: indexPath.row)! {
-        case &lt;#pattern#&gt;:
-            return &lt;#cell#&gt;
+        let sectionViewModel = viewModel.sectionViewModels.value[indexPath.section]
+        let rowViewModel = sectionViewModel.rowViewModels[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellIdentifier(for: rowViewModel), for: indexPath)
+        if let cell = cell as? TableViewCellConfigurable {
+            cell.setup(viewModel: rowViewModel)
         }
-        
     }
 }
 
-
-// MARK: - Cell
-extension &lt;#UIViewController#&gt;{
-    
-    func &lt;#Name#&gt;(indexPath: IndexPath) -&gt; &lt;#TableViewCell#&gt;{
-        
-        let reuseId = &lt;#id#&gt;
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! &lt;#TableViewCell#&gt;
-        
-        return cell
-    }
-    
-}
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>BD116BAF-7DA4-45A3-A437-525842D52B59</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>TableView - Delegate &amp; DataSource</string>
 	<key>IDECodeSnippetUserSnippet</key>

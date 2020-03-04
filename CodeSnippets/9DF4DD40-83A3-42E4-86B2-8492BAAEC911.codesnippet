@@ -6,7 +6,7 @@
 	<string>dd</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeExpression</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>DispatchQueue.main.asyncAfter(deadline: .now() + &lt;#dealy time#&gt;, execute: {
@@ -18,6 +18,8 @@
 	<string>9DF4DD40-83A3-42E4-86B2-8492BAAEC911</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Delay</string>
 	<key>IDECodeSnippetUserSnippet</key>

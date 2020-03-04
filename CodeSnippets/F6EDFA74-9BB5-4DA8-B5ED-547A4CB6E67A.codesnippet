@@ -6,7 +6,7 @@
 	<string>dd</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeExpression</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>DispatchQueue.main.async {
@@ -16,6 +16,8 @@
 	<string>F6EDFA74-9BB5-4DA8-B5ED-547A4CB6E67A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>DispatchQueue main async</string>
 	<key>IDECodeSnippetUserSnippet</key>
