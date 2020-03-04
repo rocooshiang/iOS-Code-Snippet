@@ -6,30 +6,32 @@
 	<string>bb-ss</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>func &lt;#Name#&gt;(_ content: String) -&gt; NSAttributedString {
-    
+
     // i.e myString(black color) attrString(Red color)
-    
-    let myAttribute: [NSAttributedStringKey : Any] = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): &lt;#Font Color#&gt;, NSAttributedStringKey.font: UIFont(name: &lt;#Font Name#&gt;, size: &lt;#Font Size#&gt;)!]
-    
-    let myAttribute2: [NSAttributedStringKey : Any] = [ NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): &lt;#Font Color#&gt;, NSAttributedStringKey.font: UIFont(name: &lt;#Font Name#&gt;, size: &lt;#Font Size#&gt;)!]
-    
+
+    let myAttribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): &lt;#Font Color#&gt;, NSAttributedString.Key.font: UIFont(name: &lt;#Font Name#&gt;, size: &lt;#Font Size#&gt;)!]
+
+    let myAttribute2: [NSAttributedString.Key: Any] = [ NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): &lt;#Font Color#&gt;, NSAttributedString.Key.font: UIFont(name: &lt;#Font Name#&gt;, size: &lt;#Font Size#&gt;)!]
+
     let myString = NSMutableAttributedString(string: content, attributes: myAttribute)
-    
-    
+
+
     let attrString = NSAttributedString(string: &lt;#Next String#&gt;, attributes: myAttribute2)
-    
+
     myString.append(attrString)
-    
+
     return myString
-  }</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>6B43B928-6FA5-42B0-8395-8E0302F91C2F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Binding Multiple String (Different Color)</string>
 	<key>IDECodeSnippetUserSnippet</key>

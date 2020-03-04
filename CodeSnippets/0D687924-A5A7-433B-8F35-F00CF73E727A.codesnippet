@@ -9,7 +9,7 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>func settingLink(tv: UITextView){
+	<string>func settingLink(tv: UITextView) {
     
     let descAttributes: [NSAttributedStringKey : Any] = [
       NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont(name: &lt;#Font Name#&gt;, size: &lt;#Size#&gt;)!,
@@ -44,6 +44,8 @@
 	<string>0D687924-A5A7-433B-8F35-F00CF73E727A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Link</string>
 	<key>IDECodeSnippetUserSnippet</key>

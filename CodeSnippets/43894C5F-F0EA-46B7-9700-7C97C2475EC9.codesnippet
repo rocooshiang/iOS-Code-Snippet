@@ -9,19 +9,11 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>fileprivate enum CellType: Int{
-    case &lt;#item#&gt; = 0
-    static var count: Int { return &lt;#item#&gt;.rawValue + 1 }
-}
-
-// MARK: - TableviewDelegate
+	<string>// MARK: - TableviewDelegate
 extension &lt;# UIViewController #&gt;{
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
-        switch CellType(rawValue: indexPath.row)! {
-        case &lt;#pattern#&gt;:
-            return &lt;#heigt#&gt;
-        }
+
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -30,40 +22,25 @@ extension &lt;# UIViewController #&gt;{
 }
 
 // MARK: - UITableViewDataSource
-extension &lt;# UIViewController #&gt;{
+extension &lt;# UIViewController #&gt; {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
-        return CellType.count
+        return
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
-        
-        switch CellType(rawValue: indexPath.row)! {
-        case &lt;#pattern#&gt;:
-            return &lt;#cell#&gt;
-        }
         
     }
     
 }
 
-// MARK: - Cell
-extension &lt;#UIViewController#&gt;{
-    
-    func &lt;#Name#&gt;(indexPath: IndexPath) -&gt; &lt;#TableViewCell#&gt;{
-        
-        let reuseId = &lt;#id#&gt;
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! &lt;#TableViewCell#&gt;
-        
-        return cell
-    }
-    
-}
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>43894C5F-F0EA-46B7-9700-7C97C2475EC9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>TableViewController - Delegate &amp; DataSource</string>
 	<key>IDECodeSnippetUserSnippet</key>

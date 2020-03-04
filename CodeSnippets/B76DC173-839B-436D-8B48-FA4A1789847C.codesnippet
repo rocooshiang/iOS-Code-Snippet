@@ -9,7 +9,7 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>func triggerNotificationFlow(){
+	<string>func triggerNotificationFlow() {
     
     /***
      1. 判斷是否已經 trigger 過 notification 的 alert
@@ -61,7 +61,7 @@
   }
   
   
-  func gotoPhoneSetting(){
+  func gotoPhoneSetting() {
     guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
       return
     }
@@ -77,6 +77,8 @@
 	<string>B76DC173-839B-436D-8B48-FA4A1789847C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Checking Notification Flow</string>
 	<key>IDECodeSnippetUserSnippet</key>
